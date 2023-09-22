@@ -58,6 +58,111 @@ a {
     color: var(--main-bg-color)
 }
 
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px; /* Ajoutez un espace si nécessaire */
+    background-color: #ffffff; /* Couleur de fond de l'en-tête */
+}
+
+.logo {
+width: 61.09px;
+height: 19px;
+}
+
+.nav {
+display: flex;
+justify-content: flex-end;
+align-items: flex-end;
+padding: 0px 25px;
+}
+
+/* Style pour les éléments de menu dans la barre de navigation */
+.nav ul {
+    list-style: none; /* Supprime la liste à puces */
+    padding: 0; /* Supprime le remplissage par défaut de la liste */
+    display: flex; /* Utilisez la flexbox pour afficher les éléments côte à côte */
+}
+
+.nav li {
+    margin-right: 20px; /* Espacement horizontal entre les éléments du menu */
+    position: relative; /* Ajout de position relative pour le positionnement du pseudo-élément */
+}
+
+/* Pseudo-élément pour la barre bleue au-dessus du texte */
+.nav li::before {
+    content: ''; /* Contenu vide */
+    position: absolute; /* Position absolue par rapport à l'élément li */
+    top: 0; /* Place la barre en haut du texte */
+    left: 0; /* Démarre la barre au début du texte */
+    width: 100%; /* Largeur à 100% pour couvrir tout le texte */
+    height: 2px; /* Hauteur de la barre bleue */
+    background-color: #0065fc; /* Couleur de la barre bleue */
+    transform: scaleX(0); /* Échelle horizontale à 0 pour masquer initialement la barre */
+    transform-origin: left; /* Origine de transformation à gauche pour l'animation */
+    transition: transform 0.3s ease; /* Animation de la transformation */
+}
+
+/* Style pour les liens dans les éléments de menu */
+.nav a {
+    text-decoration: none; /* Supprime la soulignement des liens */
+    color: #0065FC; /* Couleur du texte du lien */
+}
+
+/* Style pour les éléments de menu survolés */
+.nav li:hover::before {
+    transform: scaleX(1); /* Échelle horizontale à 1 pour afficher la barre bleue */
+}
+
+.search-bar {
+display: flex;
+align-items: center;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+.search-bar input[type="search"] {
+    flex: 1;
+    padding: 15px 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+border: 1px solid var(--Grey, #F2F2F2);
+background: var(--White, #FFF);
+text-align: center;
+font-family: Raleway;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+color: var(--Black, #000);
+}
+
+.search-bar .search-button {
+    padding: 15px 16px;
+    background-color: #0065FC;
+    color: #fff;
+    cursor: pointer;
+    color: var(--White, #FFF);
+    border-radius: 15px;
+text-align: center;
+font-family: Raleway;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.search-bar i.fa-location-dot {
+    color: #000000;
+    font-size: 24px; /* Ajustez la taille de l'icône selon vos préférences */
+    background-color: #F2F2F2;
+    padding: 15px 16px;
+    border-radius: 15px;
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
